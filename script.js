@@ -29,12 +29,17 @@ class EventCatalog {
 //Voorbeeld events die ik zelf waardes heb gegeven.
 const eventCatalog = new EventCatalog();
 
-eventCatalog.addEvent(new Event("Kerstfeest", "2024-12-25", "Vier kerst met vrienden!", "NoordPool", "TQimg.jpg", true, false));
+eventCatalog.addEvent(new Event("Kerstfeest", "2024-12-25", "Vier kerst met vrienden!", "NoordPool", "img/TQimg.jpg", true, false));
 eventCatalog.addEvent(new Event("Oudejaarsavond", "2024-12-31", "Aftellen naar het nieuwe jaar!", "TQ", "https://content.presspage.com/uploads/1593/1920_fotoictinnovationlab.jpg?10000", false, false));
-eventCatalog.addEvent(new Event("Introductie 3de semester", "2025-02-03", "Introductie 3de semester semester","TQ", "TQimg.jpg", true, true));
+eventCatalog.addEvent(new Event("Introductie 3de semester", "2025-02-03", "Introductie 3de semester semester","TQ", "img/TQimg.jpg", true, true));
 eventCatalog.addEvent(new Event("Je Verjaardag", "2025-01-25", "Het is je verjaardag! Je verjaardag komt ene keer per jaar","Thuis op de Bank", "https://www.amazingballoons.nl/wp-content/uploads/2023/05/banner-amazing-balloons.jpg", false, true));
 eventCatalog.addEvent(new Event("Nieuwjaarsborrel", "2025-01-11", "Heb jij ook zo zin om al je nieuwjaars voornemens te delen met al je mede studenten???" + "IK OOK!","TQ", "https://images.unsplash.com/photo-1560986752-2e31d9507413?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlyZXdvcmtzfGVufDB8fDB8fHww", true, true));
 
+eventCatalog.addEvent(new Event("Kikker in je bil", "2025-04-01", "1 April, kikker in je bil!", "Moeras", "img/Kikker.webp", false, false));
+eventCatalog.addEvent(new Event("The Future is now", "2030-01-15", "Hoe ziet jouw leven er over 5 jaar uit?", "Jouw Toekomst", "img/Future1.jpg", true, true))
+eventCatalog.addEvent(new Event("The Future is now", "2030-05-24", "Hoe ziet jouw leven er over 5 jaar uit?", "Jouw Toekomst", "img/Future2.avif", false, false))
+eventCatalog.addEvent(new Event("The Future is now", "2030-09-11", "Hoe ziet jouw leven er over 5 jaar uit?", "Jouw Toekomst", "img/Future3.jpg", false, true))
+eventCatalog.addEvent(new Event("The Future is now", "2030-11-27", "Hoe ziet jouw leven er over 5 jaar uit?", "Jouw Toekomst", "img/Future4.jpg", true, true))
 
 let currentDate = new Date();
 
@@ -96,6 +101,13 @@ function displayEventsForDay(day) {
         eventsOnThisDay.forEach(event => {
 
             const li = document.createElement('li');
+
+            const aanmeldButton = document.createElement('button');
+            aanmeldButton.innerText = "aanmelden";
+            aanmeldButton.addEventListener('click', () =>{
+                alert(`U bent aangemeld voor: ${event.title}`);
+            });
+            li.appendChild(aanmeldButton);
 
             const checkboxParkLabel = document.createElement('label');
             checkboxParkLabel.innerText = "Parkeren mogelijk";
