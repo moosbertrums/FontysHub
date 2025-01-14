@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FontysHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <img class="logo" src="Fontys Hub.png" height="81" width="210"/>
+</header>
+<div class ="flex-container">
+    <div class ="sider">
+        <div class="calendar-container">
+            <div id="calendar-header">
+                <button id="prev-month">←</button>
+                <h2 id="month-year">December 2024</h2>
+                <button id="next-month">→</button>
+            </div>
+            <table id="calendar-table">
+                <thead>
+                <tr>
+                    <th>Ma</th>
+                    <th>Di</th>
+                    <th>Wo</th>
+                    <th>Do</th>
+                    <th>Vr</th>
+                    <th>Za</th>
+                    <th>Zo</th>
+                </tr>
+                </thead>
+                <tbody id="calendar-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="event-list">
+        <ul id="events">
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    background-color: #663366;
+    display: flex;
+    flex-direction: column;
+    height: 75px;
+    width: -webkit-fill-available;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: #E0E0E0;
+    width: -webkit-fill-available;
+}
+
+.event-info {
+    background-color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 500px;
+}
+.calendar-container {
+    background-color: white;
+    border-radius: 10px;
+    min-width: 266px;
+    min-height: 370px;
+    margin: 10px 0 10px 50px;
+    padding: 10px;
+    /*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calendar-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0;
+    text-align: center;
+    height: 38px;
+    width: 38px;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+td {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+tr {
+
+}
+
+td.event {
+    background-color: #DA0077;
+    color: white;
+    border-radius: 10px;
+}
+
+#event-list {
+    margin: 0 0 0 10px;
+    background-color: #E0E0E0;
+    padding: 10px 0 10px 10px ;
+    width: -webkit-fill-available;
+    /*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+
+}
+
+#event-list h3 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: normal;
+}
+
+img {
+    height: 300px;
+    width: -webkit-fill-available;
+    border-radius: 10px 0 10px 10px;
+    /*    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.logo {
+    height: max-content;
+    width: max-content;
+}
+
+.sider {
+    width: fit-content;
+    height: max-content;
+    min-width: 350px;
+    min-height: 550px;
+    background-color: #663366;
+}
+
+.event-title{
+    font-size: 30px;
+    color: #DA0077;
+}
+
+.event-desc{
+    font-size: 20px;
+}
